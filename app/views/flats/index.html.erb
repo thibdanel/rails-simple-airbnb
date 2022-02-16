@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Appartments list</h3>
+  <ol>
+    <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do%>
+       <li><%=flat.name%>, <%= flat.price_per_night%></li>
+        <%end%>
+       <%end%>
+  </ol>
+  <%= link_to "Create!", new_flat_path, class: 'btn btn-primary' %>
+</div>
